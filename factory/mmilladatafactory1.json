@@ -1,0 +1,9 @@
+{
+	"name": "mmilladatafactory1",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "f4253a62-18d9-473c-9fb7-0eb816d49eb3",
+		"tenantId": "ef2fbdae-f02f-4795-a002-5022ffd4ce7f"
+	}
+}
