@@ -1,5 +1,5 @@
 {
-	"name": "ingesta_capa_bronce",
+	"name": "ingesta_input_capa_bronce",
 	"properties": {
 		"description": "ingesta de datos  desde input a capa bronce",
 		"activities": [
