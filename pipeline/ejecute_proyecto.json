@@ -5,36 +5,13 @@
 			{
 				"name": "Transformacion",
 				"type": "ExecutePipeline",
-				"dependsOn": [
-					{
-						"activity": "Ingestbronce",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
+				"dependsOn": [],
 				"policy": {
 					"secureInput": false
 				},
 				"typeProperties": {
 					"pipeline": {
 						"referenceName": "ingesta_capa_plata_oro",
-						"type": "PipelineReference"
-					},
-					"waitOnCompletion": true
-				}
-			},
-			{
-				"name": "Ingestbronce",
-				"type": "ExecutePipeline",
-				"dependsOn": [],
-				"policy": {
-					"secureInput": false
-				},
-				"userProperties": [],
-				"typeProperties": {
-					"pipeline": {
-						"referenceName": "ingesta_input_capa_bronce",
 						"type": "PipelineReference"
 					},
 					"waitOnCompletion": true
