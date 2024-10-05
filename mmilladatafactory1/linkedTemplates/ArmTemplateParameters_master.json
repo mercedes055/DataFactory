@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "mmilladatafactory1"
+		},
+		"Conector_ADLS_DataFactory_accountKey": {
+			"value": ""
+		},
+		"Conector_AzureDatabricks_DataFactory_accessToken": {
+			"value": ""
+		},
+		"Conector_ADLS_DataFactory_properties_typeProperties_url": {
+			"value": "https://mmillap.dfs.core.windows.net/"
+		},
+		"Conector_AzureDatabricks_DataFactory_properties_typeProperties_existingClusterId": {
+			"value": "0926-002639-xzeh5znv"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
