@@ -1,0 +1,24 @@
+{
+	"name": "Exec_proyect",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "ejecute_proyecto",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Day",
+				"interval": 1,
+				"startTime": "2024-10-05T05:00:00",
+				"timeZone": "UTC-11"
+			}
+		}
+	}
+}
