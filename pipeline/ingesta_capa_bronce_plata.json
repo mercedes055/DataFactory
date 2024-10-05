@@ -4,7 +4,7 @@
 		"description": "ingesta de datos desde la capa bronce hacia la capa plata",
 		"activities": [
 			{
-				"name": "Notebook1",
+				"name": "capa_bronce_a_plata",
 				"type": "DatabricksNotebook",
 				"dependsOn": [],
 				"policy": {
