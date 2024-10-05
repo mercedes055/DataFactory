@@ -3,7 +3,52 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Transformacion",
+				"name": "Ingesta_plata_oro",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "ingesta_bronce_plata",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureInput": false
+				},
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "ingesta_capa_plata_oro",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "ingesta_bronce_plata",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "Ingesta_input_bronce",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "ingesta_capa_bronce_plata",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "Ingesta_input_bronce",
 				"type": "ExecutePipeline",
 				"dependsOn": [],
 				"policy": {
@@ -11,7 +56,7 @@
 				},
 				"typeProperties": {
 					"pipeline": {
-						"referenceName": "ingesta_capa_plata_oro",
+						"referenceName": "ingesta_input_capa_bronce",
 						"type": "PipelineReference"
 					},
 					"waitOnCompletion": true
